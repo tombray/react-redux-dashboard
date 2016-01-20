@@ -19,7 +19,7 @@ export default class DashboardApp extends Component {
               <IpMapContainer />
           </Col>
           <Col xs={4}>
-            <StackedBarChartContainer width="500" height="750"/>
+            <StackedBarChartContainer width="500" height="600"/>
           </Col>
         </Row>
       </div>

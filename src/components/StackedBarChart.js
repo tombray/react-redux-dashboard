@@ -29,7 +29,7 @@ export default class StackedBarChart extends Component {
     render() {
       const { data, onIpClick, width, height } = this.props;
       const mX = xMax(data);
-      const x = xScale(data, mX, width - 120);
+      const x = xScale(data, mX, width - 200);
       const y = yScale(data, height);
       const ips = data[0].map( (d) => d.y );
 
@@ -48,7 +48,7 @@ export default class StackedBarChart extends Component {
       return (
         <Panel header={<span><strong>Top 25 IPs</strong></span>}>
           <div>Click a bar to center the map on the associated IP</div>
-          <svg width="500" height="800">
+          <svg width={width} height={height}>
             <g >
               {threatGroups(data, x, y, onIpClick)}
               {yAxis}
