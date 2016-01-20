@@ -72,7 +72,7 @@ export default class Livemap extends Component {
   render() {
     return (
 
-    <Panel header={<span><strong>IP Map:</strong> {this.props.ips.length} ips</span>}>
+    <Panel header={<span><strong>IP Map:</strong> {this.props.ips.length} IPs</span>}>
       <div style={{marginBottom:10}}>Click a dot to view details.</div>
       <div className='map' ref='map'></div>
     </Panel>

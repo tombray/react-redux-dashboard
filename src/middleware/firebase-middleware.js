@@ -43,6 +43,8 @@ const randomIp = () => {
   }
 }
 
+const pushTwoIpsToFirebase = (firebaseRef) => firebaseRef.push([ randomIp(), randomIp()]);
+
 export default function createFirebaseMiddleware(firebaseRef) {
 
   return store => {
@@ -64,28 +66,21 @@ export default function createFirebaseMiddleware(firebaseRef) {
       (ipMessages) => {
         const normalized = normalize({ ips: _.flatten(ipMessages) }, { ips: arrayOf(ip) });
         const action = {type:'ADD_IPS', entities: normalized.entities, ips: normalized.result.ips};
-        console.log('dispatching', action);
+        console.log('Received IPS from server, dispatching:', action);
         store.dispatch(action);
       },
       error => console.log(error)
     );
 
-    const ipCount = () => {
-      const ipCount = store.getState().ips.length;
-      console.log(ipCount);
-      return ipCount;
-    }
+    const ipCount = () => store.getState().ips.length;
 
     setInterval(() => {
       if ( ipCount() < 2000 ) {
-        const chance = new Chance();
-        firebaseRef.push([
-          randomIp(),
-          randomIp()
-        ]);
+        pushTwoIpsToFirebase(firebaseRef.child('events'));
       }
-
     }, 5000)
+
+    pushTwoIpsToFirebase(firebaseRef.child('events'));
 
     return next => action => {
       return next(action);

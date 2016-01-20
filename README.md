@@ -1,2 +1,2 @@
-Realtime Dashboard (React, Redux, D3, Leaflet, Socket.IO)
-=========================================================
+Realtime Dashboard with React, Redux, RxJs, Leaflet, D3, and Firebase
+=====================================================================

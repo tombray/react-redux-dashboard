@@ -15,10 +15,8 @@ const selectedPosition = ( ips, selectedIp ) => {
 }
 
 function mapStateToProps(state) {
-  console.log(state.entities.ips);
   const markers = state.ips.length > 0 ? _.map(state.entities.ips, ipToMarker) : [];
   const selected = markers.length > 0 && state.selectedIp ? selectedPosition(state.entities.ips, state.selectedIp) : null;
-  console.log('selected position', selected);
   const center = selected ? selected : defaultCenter;
 
   return {

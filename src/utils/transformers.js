@@ -1,7 +1,9 @@
 import _ from 'lodash';
 import d3 from 'd3';
 
-const transformIpsToThreatGroup = (ips, threat) => _.reduce(ips, (acc, ip) => [...acc, { x:ip.ip, y: ip.viruses[threat] } ], []);
+const transformIpsToThreatGroup = (ips, threat) =>
+  _.reduce( ips, (acc, ip) => 
+    [...acc, { x:ip.ip, y: ip.viruses[threat] } ], []);
 
 export const ipsToThreats = (ips, threatTypes) => (
   _.reduce(threatTypes, (acc, threat) => [...acc, transformIpsToThreatGroup(ips, threat)], [] )
