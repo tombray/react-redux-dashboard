@@ -1,0 +1,33 @@
+[
+  [
+    {
+            "ip": "254.223.75.186",
+            "owner": "ACME Corp",
+            "servers": {
+                "webServerCount": 2,
+                "mailServerCount": 2,
+                "ftpServerCount": 2
+            },
+            "viruses": {
+                "trojanCount": 2,
+                "botCount": 2,
+                "spamCount": 2
+            }
+        },
+        {
+                "ip": "254.223.75.184",
+                "owner": "ACME Corp",
+                "servers": {
+                    "webServerCount": 2,
+                    "mailServerCount": 2,
+                    "ftpServerCount": 2
+                },
+                "viruses": {
+                    "trojanCount": 2,
+                    "botCount": 2,
+                    "spamCount": 2
+                }
+            }    
+  ]
+
+]

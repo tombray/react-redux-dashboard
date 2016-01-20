@@ -1,0 +1,48 @@
+{
+  "name": "react-dashboard",
+  "version": "1.0.0",
+  "description": "Realtime dashboard with React, Redux, D3, and Leaflet",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint src",
+    "test": "mocha './src/**/*.spec.js' --compilers js:babel-core/register"
+  },
+  "author": "Tom Bray",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.0.20",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-react": "^6.0.15",
+    "babel-preset-stage-0": "^6.0.15",
+    "chai": "^3.4.1",
+    "eslint-plugin-react": "^3.6.2",
+    "expect": "^1.13.4",
+    "expect-jsx": "^2.2.2",
+    "mocha": "^2.3.4",
+    "react-addons-test-utils": "^0.14.6",
+    "react-hot-loader": "^1.3.0",
+    "redux-devtools": "^3.0.1",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.3.14",
+    "chance": "^0.8.0",
+    "d3": "^3.5.12",
+    "firebase": "^2.3.2",
+    "isomorphic-fetch": "^2.2.1",
+    "leaflet": "^0.7.7",
+    "lodash": "^4.0.0",
+    "normalizr": "^2.0.0",
+    "react": "^0.14.0",
+    "react-bootstrap": "^0.28.2",
+    "react-dom": "^0.14.0",
+    "react-redux": "^4.0.6",
+    "redux": "^3.0.5",
+    "redux-thunk": "^1.0.3",
+    "rx": "^4.0.7",
+    "rxjs": "^5.0.0-beta.1"
+  }
+}
