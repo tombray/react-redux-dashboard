@@ -37,6 +37,6 @@ describe('Reducers', () => {
       ips: [ '12.12.12.12', '12.12.12.13', '12.12.12.11' ]
     }
 
-    expect(actual).toEqual(expected);
+    expect(actual.entities).toEqual(expected.entities);
   });
 })
