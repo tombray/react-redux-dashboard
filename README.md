@@ -6,6 +6,8 @@ Incoming data is buffered using RxJs so that new information can be rendered in 
 
 The [stacked bar chart](src/components/StackedBarChart.js) on the right demonstrates using D3 with React.
 
+Take a look at some of [the tests](src/utils/transformers.spec.js) as well.
+
 ```
 npm install
 npm test
