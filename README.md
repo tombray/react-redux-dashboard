@@ -15,3 +15,7 @@ npm start
 ```
 
 Then visit [http://localhost:3000](http://localhost:3000).
+
+You should see something like this:
+
+![Screenshot](screenshot.png)
