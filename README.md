@@ -4,7 +4,7 @@ This sample application demonstrates using Redux with [custom middleware](src/mi
 
 Incoming data is buffered using RxJs so that new information can be rendered in batches.
 
-The [stacked bar chart](src/components/StackedBarChartjs) on the right demonstrates using D3 with React.
+The [stacked bar chart](src/components/StackedBarChart.js) on the right demonstrates using D3 with React.
 
 ```
 npm install
